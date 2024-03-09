@@ -1,0 +1,19 @@
+The policy for using pointer:
+
+There are four smart pointers std::auto_ptr<T>, std::unique_ptr<T>, std::shared_ptr<T>, and std::weak_ptr<T>.
+The std::auto_ptr is deprecated and should not use it after C++11. C++11 introduces following 3 smart pointers and following is the policy how 
+
+
+std::auto_ptr
+This is deprecated and should not use it, even there is a good technic. There are several issues.
+
+std::unique_ptr
+
+shared_ptr<T>
+
+weak_ptr<T>
+
+
+
+
+

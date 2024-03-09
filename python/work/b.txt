@@ -1,0 +1,55 @@
+{"body": {"passwd": "hello",
+ "role": "client",
+ "userId": "client"},
+ "header": {"type": "action",
+ "action_name": "login"}}
+create_connection...
+create_connection4
+sent!
+Received '{"header":{"type":"login_result",
+"sessionId":"4927496b-3ddc-470a-8b91-f305330bc57b"},
+"body":{"sessionId":"4927496b-3ddc-470a-8b91-f305330bc57b"}}'
+sessionId '4927496b-3ddc-470a-8b91-f305330bc57b'
+json_getMyConv '{"body": {},
+ "header": {"sessionId": "4927496b-3ddc-470a-8b91-f305330bc57b",
+ "type": "action",
+ "action_name": "get_my_conversations"}}'
+sent!
+Received '{"header":{"type":"conversations"},
+"body":{"conversations":[{"id":1153,
+"status":"EXECUTE",
+"tradeDate":"2018-10-10 00:00:00",
+"settlementDate":"2018-10-12 00:00:00",
+"userId":"client",
+"traderId":"client",
+"side":"Buy",
+"symbol":"AAPL",
+"spotPrice":100.0,
+"riskFreeRate":0.01,
+"dividendYield":0.01,
+"strategy":"STRADDLE",
+"legs":[{"id":0,
+"ls":"Long",
+"cp":"Call",
+"quantity":100.0,
+"strike":101.0,
+"volatility":0.23,
+"price":1.5855493632662976,
+"delta":0.43257646903111077,
+"gamma":0.07695840070816149,
+"vega":0.08728980244706536,
+"theta":-0.05572504518815358,
+"maturity":"2018-10-30 00:00:00"},
+{"id":1,
+"ls":"Long",
+"cp":"Call",
+"quantity":100.0,
+"strike":101.0,
+"volatility":0.25,
+"price":1.7603891560651357,
+"delta":0.43958564720240919,
+"gamma":0.07100419685162446,
+"vega":0.08753942077597549,
+"theta":-0.06074303458786848,
+"maturity":"2018-10-30 00:00:00"}]}]}}'
+close!

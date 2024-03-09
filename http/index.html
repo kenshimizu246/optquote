@@ -1,0 +1,101 @@
+<html>
+<header>
+<link rel="stylesheet" type="text/css" href="index.css">
+</header>
+<body>
+	<div class='base'>
+		<div><img src="headerimage.jpg"/></div>
+		<div class='body'>
+			<div class='menu-bar'>
+				<div class='menu'>
+					<div class='menu-item'>Home</div>
+				</div>
+				<div class='menu'>
+					<div class='menu-item'>Products</div>
+					<div class='sub-menu'>
+						<div class='menu-item' onclick='window.open("/optquote/?role=client", "client", "width=860,height=700,top=20,left=20");'>Client</div>
+						<div class='menu-item' onclick='window.open("/optquote/?role=trader", "trader", "width=860,height=700,top=50,left=50");'>Trader</div>
+					</div>
+				</div>
+			</div>
+			<div class='content'>
+<div>
+<p><b>Background</b></p>
+<p>
+This page introduces a model of high speed Internet application for financial industry through developing a prototype of server-client application over the Internet. The client is single page application (SPA) with React.js and the server is developed from scratch based on C++. The server-client communication is Web Socket2. Web Socket2 and C++ application enables to handle high volume transaction over the Internet. The application is just a prototype application so that it cannot support real business but it is enough to examine the feasibility to use this model in the real world.
+The supposed business is OTC option trade for client and trader communication over the Internet. Client can send a RFQ (Request For Quotation), then trader can response a quote for this. Client can oder or reject their quote, then trader can execute a order from client. The sequence sequence is below.
+</p>
+<img src="sequence_diagram.svg"/>
+<img src="state_sequence2.svg"/>
+<p>
+The real business needs bid/offer volatility but to make it easier to examine it from technology point of view, bid/offer volatility quote is not supported.
+Through developing this prototype application, we will examine not only technologies but also development process. What is necessary to increase quality but reduce cost.
+</p>
+<p>
+In analysis, we will discuss following later in this document.
+	<li>Quality with suppressing cost</li>
+	<li>Productivity</li>
+	<li>Test Method</li>
+	<li>Database Enhancement</li>
+</p>
+<p>
+The purpose for this project is to study feasibility to use ReactJS as a financial frontend system and C++ backend server for evaluating productibity and stability comparing Java based backend development through developing prototype option quoting system. For frontend side, we focus on functionality, usability, and productivity for financial system. For backend, C++ has huge advantage for performance and resource management but productivity is lower than Java or other interpreter language. We focus on productivity and stability for backend development and test first method is one of the solutions for this area. The test case must be included not only functionality test case but also performance test and memory leackage test. Through this test first approach, we will find design patterns to achieve our goal to become one of the options comparing Java or other interpreter language. The one of big concerns is memory leackage for C++. The Java or other interpreter language has garbage corrector or similar function to resolve this issssue. Recently C++ supports similar functionality, shared_pointer. Also test first approach is another solution to check memory leakage. A test case to execute a method repeatedly within a loop enables us to check memory growth and performance to prevent memory leakage. Also it enhances memory usage. Recently in Java or other interpreter language has the issue for memory usage cause developer relys on garbage correction overmuch. The one of the solution for this issue is C++ and test first approach. C++ can control memory allocation directly and we can check that behavior in the unit test. The destructor for the class is executed immediately to release resources in C++ but we have to wait garbage corrector in Java or other interpreter languate. Garbage corrector is not under our control. It is hard to test it because it has very tight dependency on conditions.
+</p>
+</div>
+<div>
+<p><b>Prototype System Flow</b><p>
+<p>
+This application is for communicating with client and broker to decide price and trading condition for option. The client can send a RFQ (request for quotation) for option. The trader can evaluate an option value for the RFQ based on black sholes model, then send a quotation to the client. The client can order, counter, or reject a quotation. If client sends an order, then broker can accept or reject that order because while from quotation to order, market will be moved rapidly and it is impossible for trader to hedge the trade. Once trader can accept an order, then this trade will be executed and this trade makes open position. The client can make an close RFQ with a click.
+</p>
+</div>
+<div>
+	<img src="state_sequence2.svg"/>
+</div>
+<div>
+	<img src="sequence_diagram.svg"/>
+</div>
+<div>
+<!--
+Other:
+Now , a single page application becomes one of our options to develop a financil front-end system. The performance and usability is getting better than last several years. The ReactJS has possiblity to develop high performance front-end application cause it has vertual dom. It enables to draw quickly enough for business use.
+The importance to use C++ is most financial institution uses C++ for quants library. Some company uses Java JINI to call C++ library as black box and it losts performance and stability. The engineer for C++ and Java is totally differenct team and sometimes having a problem causing miss communication between the teams. Through developing server from scratch with C++, I found pros and cons more cleary better than just discussion over the desk. It is more platical and this knowledge is more usefull to production. To develop stable and high ratency system, it forcus system risk management. The points are stability and rabustness, never stop the service. From that points, the unit test is the key technology. From unit level, it tests not only specification but also each functions tested repeatedly more than 1000000 to check stabilitty and memory usage. Even method called repeatedly more than 1000000, the process memory size must be same between first call and last call.
+Why ReactJS? The reason is that the financial client needs more quick operation. Some user requires it can operate only from keyboard because mouse takes more time than keyboard operation. The forcus between the editable objects must be moved with only keyboard, tab or shift+tab.
+-->
+</div>
+<div>
+<p><b>Analysis and Solution</b></p>
+</div>
+<div>
+<div>
+<p><b>Database Design</b></p>
+<p>
+Financial system requires performance. The design policy is following.
+</p>
+<p>
+<li>1. transaction data must be fixed length.</li>
+<li>2. split multiple tables to exclude valiable length data.</li>
+</p>
+<p>
+The advantage for this policy is that there are two types of database engine, for example postgress SQL and Maria DB. Both database engines are very popular open source software. The difference is that update operation. Postgress SQL reallocates record space for update operation but Maria DB is different. The Maria DB allocates record space if record size is variable. If it is fixed record size, it overwrite a record when it is update operation. That makes better performance because it does not need to search free space in the disc. Off cause some of engine supports pre allocation model. Even though, that will allocation always as a new record, so that it wastes disc space and messing up the sequence of records. The requesce of records means for financeial sytem, the order of record is very ...
+basically the order of record is key for the performance. From hardware point of view our hard disk is composed of disk and reader. If record is ordered in the disk, it is not necessary to jump on the disk. It needs simply read in the disk. Also hard disk reads data based on block size, so that the record size is less than block size and block contains multiple records, one read can load multple record but if each recorrds are located in the multiple block,
+if the record are spreading in multiple blocks, the reader jumps on the disk and load block with unnecessary memory. For example, the recorrd size is 1k and block size is 4k, then each block has only one record to be load, then that waste 4 times. If it uses RAID 5, that waste will increase related to the number of disk theoretically.
+</p>
+</div>
+<div>
+<p><b>The advantage for C++ are;</b></p>
+<p>
+<li>1. it is very light comparing vertual machine like Java. The "light" means small memory usage and direct to launch an application. For Java, it needs to launch vertual engine before starting application. C++ application starts directly. This is the advantage for the C++ application in case of emergency restart. </li>
+<li>2. it has more functionality than interpreter languate because it can use operating system functionality.</li>
+<li>3. it can use system call directly so that it can support atomic operation.</li>
+<li>4. If it needs resource access, it can directly access system resource exclusively.</li>
+</p>
+<p>
+For memory issue for modern interpreter language. sometimes I found a code which uses constructtor to switch on and destructor to switch off but this approach is only effective C/C++ language. Other interupter language will cause issue this approach because some interrupter language will not gurantee the execution of destructor. Instead use of destructor, most interpreter language supports try-catch-finally functtionality to execute codes developer intendedly in the end of source code in finally block.
+</p>
+</div>
+			</div>
+		</div>
+		<div>Footer</div>
+	</div>
+</body>
+</html>

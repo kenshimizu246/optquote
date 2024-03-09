@@ -1,0 +1,165 @@
+Put-Call Parity
+
+
+===============================================================================================================================
+
+Put-Call Parity
+REVIEWED BY JAMES CHEN   Updated Aug 4, 2018
+What is Put-Call Parity
+Put-call parity is a principle that defines the relationship between the price of European put options and European call options of the same class, that is, with the same underlying asset, strike price and expiration date. Put-call parity states that simultaneously holding a short European put and long European call of the same class will deliver the same return as holding one forward contract on the same underlying asset, with the same expiration, and a forward price equal to the option's strike price. If the prices of the put and call options diverge so that this relationship does not hold, an arbitrage opportunity exists, meaning that sophisticated traders can theoretically earn a risk-free profit. Such opportunities are uncommon and short-lived in liquid markets.
+
+
+The equation expressing put-call parity is:
+
+
+C + PV(x) = P + S
+
+where:
+
+C = price of the European call option
+
+PV(x) = the present value of the strike price (x), discounted from the value on the expiration date at the risk-free rate
+
+P = price of the European put
+
+S = spot price or the current market value of the underlying asset
+
+https://www.investopedia.com/terms/p/putcallparity.asp
+
+---------------------------------------------------------
+
+Understanding Put-Call Parity
+
+ 
+
+Put-call parity is an important principle in options pricing first identified by Hans Stoll in his paper, The Relation Between Put and Call Prices, in 1969. It states that the premium of a call option implies a certain fair price for the corresponding put option having the same strike price and expiration date, and vice versa. Support for this pricing relationship is based upon the argument that arbitrage opportunities would materialize if there is a divergence between the value of calls and puts. Arbitrageurs would come in to make profitable, riskless trades until the put-call parity is restored.
+
+To begin understanding how the put-call parity is established, let's first take a look at two portfolios, A and B. Portfolio A consists of a european call option and cash equal to the number of shares covered by the call option multiplied by the call's striking price. Portfolio B consist of a european put option and the underlying asset. Note that equity options are used in this example.
+
+Portfolio A = Call + Cash, where Cash = Call Strike Price
+
+Portfolio B = Put + Underlying Asset
+
+
+It can be observed from the diagrams above that the expiration values of the two portfolios are the same.
+
+Call + Cash = Put + Underlying Asset
+
+Eg. JUL 25 Call + $2500 = JUL 25 Put + 100 XYZ Stock
+
+If the two portfolios have the same expiration value, then they must have the same present value. Otherwise, an arbitrage trader can go long on the undervalued portfolio and short the overvalued portfolio to make a riskfree profit on expiration day. Hence, taking into account the need to calculate the present value of the cash component using a suitable risk-free interest rate, we have the following price equality:
+
+Put-Call Parity Equation
+Put-Call Parity and American Options
+Since American style options allow early exercise, put-call parity will not hold for American options unless they are held to expiration. Early exercise will result in a departure in the present values of the two portfolios.
+
+Validating Option Pricing Models
+The put-call parity provides a simple test of option pricing models. Any pricing model that produces option prices which violate the put-call parity is considered flawed.
+
+http://www.theoptionsguide.com/understanding-put-call-parity.aspx
+
+-----------------------------------------------------------------------------------------------
+
+NTRODUCTION TO OPTIONS
+Put Call Parity
+0:00
+/
+4:34
+ 
+1x
+Individuals trading options should familiarize themselves with a common options principle, known as put-call parity.
+
+Put-call parity defines the relationship between calls, puts and the underlying futures contract.
+
+This principle requires that the puts and calls are the same strike, same expiration and have the same underlying futures contract.  The put call relationship is highly correlated, so if put call parity is violated, an arbitrage opportunity exists.
+
+The formula for put call parity is c + k = f +p, meaning the call price plus the strike price of both options is equal to the futures price plus the put price.
+
+ 
+Using algebraic manipulation, this formula can be rewritten as futures price minus call price plus put price minus strike price is equal to zero  f - c + p – k = 0. If this is not the case, an arbitrage opportunity exists.
+
+For example, if the futures price is 100 minus the call price of 5, plus the put price of 10 minus the 105 strike equals zero.
+
+Say the futures increase to 103 and the call goes up to 6. The put price must go down to 8. 
+
+Now say the future increases to 105 and the call price increases to 7. The put price must go down to 7.
+
+As we originally said, if futures are at 100, the call price is 5 and the put price is 10. If the futures fall to 97.5, the call price is 3.5, the put price goes to 11. 
+
+If a put or call does not adjust in accordance with the other variables in the put-call parity formula, an arbitrage opportunity exists.  Consider a 105 call priced at 2, the underlying future is at 100 so the put price should be 7.
+
+ 
+If you could sell the put at 8 and simultaneously buy the call for 2, along with selling the futures contract at 100, you could benefit from the lack of parity between the put, call and future.
+
+Market Outcomes
+Look at different market outcomes demonstrating that this position allows individuals to profit by arbitrage regardless of where the underlying market finishes.
+
+The futures price finished below 105 at expiration. Our short 105 put is now in-the-money and will be exercised, which means we are obligated to buy a futures contract at 105 from the put owner.
+
+When this trade was executed, we shorted a futures contract at 100, therefore our futures loss is $5, given the fact that we bought at 105 and sold at 100. This loss is mitigated by the $8 we received upon the sale of the put. The put owner forfeited the $8 when he exercised his option.
+
+Our long 105 call expires worthless,  so we forfeit the $2 call premium. This brings our net profit to $1 with the loss of $5 from the futures and loss of $2 from the call and the gain of $8 from the put.
+
+ 
+Another scenario, the futures price finished above 105 at expiration. Our long 105 call is now in-the-money allowing us to exercise the call and buy a futures contract at 105. Because we exercised the option, our $2 premium is forfeited.
+
+When this trade was executed, we shorted a future at 100, therefore our futures loss is $5. The $8 we received from the sale of the put is now profit because it expired worthless.  If you add up the $8 gain from the put, less the $5 loss from the futures and $2 loss from the call you would net a profit of $1.
+
+If the futures end exactly at 105, both options expire worthless. We lose $5 on the futures and make net $6 in options premium, therefore, we net $1.
+
+We stated earlier that put-call parity would require the put to be priced at 7. We have now seen that a put price of 8 created an arbitrage opportunity that generated a profit of $1 regardless of the market outcome.
+
+Put-call parity keeps the prices of calls, puts and futures consistent with one another. Thus, improving market efficiency for trading participants.
+
+https://www.cmegroup.com/education/courses/introduction-to-options/put-call-parity.html
+
+----------------------------------------------------------------------------------------------------
+Options: The Concept of Put-Call Parity
+Share
+Pin
+Email
+Youth Chess Event Held On Capitol Hill
+•••
+BY ANDREW HECHT  Updated February 04, 2019
+Options are derivative instruments. One of the reasons that option trading and investing is so much fun is that is it like a game of chess. During the life of an option, there are so many opportunities that will enhance or destroy the value of a position. There are so many moving pieces in the puzzle of options trading. The nominal option prices move higher or lower as implied volatility can move up or down and supply and demand for options themselves will move option premiums.
+
+What Is Put-Call Parity?
+Put-call parity is a concept that anyone involved in options markets needs to understand. Parity is a functional equivalence. The genius of option theory and structure is that two instruments, puts and calls, are complementary with respect to both pricing and valuation. Therefore, by knowing the value of a put option you can quickly calculate the value of the complimentary call option (with the same strike price and expiration date). There are many reasons that this is important knowledge for traders and investors.
+
+
+It can highlight profitable opportunities that present themselves when option premiums are out of whack. Understanding put-call parity can also help you to gauge the relative value of an option you may be considering for your portfolio.
+
+
+There are two styles of options: American and European. The exercise of American options can be at any time during their life while the exercise of European options only occurs on the options' expiration date. Generally, put-call parity only works perfectly with European style options.
+
+
+Option premiums have two components: intrinsic value and time value. Intrinsic value is the in-the-money portion of the option. A $15 call option on silver with a premium of $1.50 when silver is trading at $16 has $1 of intrinsic value and 50 cents of time value. Time value represents the value of the option attributed exclusively to time. A $17 call option on silver that has a premium of 50 cents when silver is trading at $16 has no intrinsic value and 50 cents of time value. Therefore, in-the-money options have both intrinsic and time value while an out-of-the-money option has only time value.
+
+Put-call parity is an extension of these concepts.
+
+
+If June gold is trading at $1200 per ounce, a June $1100 call with a premium of $140 has $100 of intrinsic value and $40 of time value. The concept of put-call parity, therefore, tells us that the value of the June $1100 put option will be $40.
+
+
+As another example, if July cocoa were trading at $3000 per ton, a July $3300 put option with a premium of $325 per ton would tell us definitively that the value of the July $3300 call option is $25 per ton. As you might imagine, call and put options that are at-the-money (strike prices equal to the current futures price) with the same expiration and strike price (straddles) will trade at the same price as both only have time value.
+
+
+To bring this all together, there are some simple formulas to remember for European style options:
+
+
+Long Call + Short Future = Long Put (same strike price and expiration)
+
+Long Put + Long Future = Long Call (same strike price and expiration)
+
+Long Call + Short Put = Long Future (same strike price and expiration)
+
+Long Put + Short Call = Short Future (same strike price and expiration)
+
+These types of positions are synthetic positions created by combining the requisite options and futures with the same maturity and in the case of the options, the same strike prices.
+
+Options are amazing instruments. Understanding options and put-call parity will enhance your market knowledge and open new doors of profitability and risk management for all of your investment and trading activities.
+
+Put-call parity is an attribute of options markets that is applicable not only in commodities but in all asset markets where options markets thrive. Spend some time and understand put-call parity as it is a concept that will put you in a position to understand markets better than most other market participants giving you an edge over all competition. Success in markets is often the result of the ability to see market divergence or mispricing before others. The more you know, the better the chances of success.
+
+https://www.thebalance.com/options-the-concept-of-put-call-parity-808888
+

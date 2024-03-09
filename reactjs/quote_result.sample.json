@@ -1,0 +1,50 @@
+{"header":{
+	"type":"quote_result",
+	"sessionId":"5cb524ca-5796-49cf-902f-63352b1d7a2a"
+},
+	"body":{
+		"conversation":{
+			"id":1335,
+			"status":"TAKE",
+			"tradeDate":"2018-12-28 00:00:00",
+			"settlementDate":"2018-12-28 00:00:00",
+			"userId":"client",
+			"side":"Sell",
+			"symbol":"AMWD",
+			"spotPrice":84.95,
+			"riskFreeRate":0.01,
+			"dividendYield":0.03,
+			"strategy":"straddle",
+			"legs":[
+				{
+					"id":0,
+					"ls":"Long",
+					"cp":"Call",
+					"quantity":100,"strike":80,
+					"volatility":0,
+					"price":4.86385579896605,
+					"delta":6.92993759492053e-310,
+					"gamma":3.5e-323,
+					"vega":3.2e-322,
+					"theta":6.9299375949166e-310,
+					"maturity":"2018-12-28 00:00:00"
+				},
+				{
+					"id":1,
+					"ls":"Long",
+					"cp":"Call",
+					"quantity":100,
+					"strike":90,
+					"volatility":0,
+					"price":0,
+					"delta":1.4375482808879622e-71,
+					"gamma":1.400407390476271e-76,
+					"vega":1.1965733166840909e+142,
+					"theta":6.482098922307537e+170,
+					"maturity":"2018-12-28 00:00:00"
+				}
+			]
+		},
+		"status":"OK"
+	}
+}

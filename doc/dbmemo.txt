@@ -1,0 +1,119 @@
+  "db_host":"localhost",
+  "db_port":3306,
+  "db_name":"market",
+  "db_user":"maria",
+  "db_pass":"maria246",
+
+
+$ mysql -u maria -P 3306 -p
+
+> show databases;
+
+> create database test;
+
+> use test;
+
+
+
+create table school_sum (
+school_name varchar(28),
+area_name varchar(28),
+num_of_student int(8),
+num_of_teacher int(8)
+);
+
+insert into school_sum values('no_1', 'A', 100, 3);
+insert into school_sum values('no_2', 'C', 2000, 10);
+insert into school_sum values('no_3', 'C', 1000, 10);
+insert into school_sum values('no_4', 'B', 200, 3);
+insert into school_sum values('no_5', 'B', 1000, 3);
+insert into school_sum values('no_6', 'B', 300, 3);
+insert into school_sum values('no_7', 'A', 200, 5);
+insert into school_sum values('no_8', 'C', 60, 1);
+insert into school_sum values('no_9', 'D', 20, 1);
+insert into school_sum values('no_10', 'D', 15, 1);
+insert into school_sum values('no_11', 'A', 20, 2);
+insert into school_sum values('no_12', 'B', 10, 3);
+
+
+create table employee_master (
+emp_id varchar(4),
+emp_name varchar(24),
+division varchar(2)
+);
+
+create table employee_skill (
+emp_id varchar(4),
+skill_code varchar(2),
+create_date date
+);
+
+insert into employee_master values('0001', 'Suzuki', 'A1');
+insert into employee_master values('0002', 'Tanaka', 'A2');
+insert into employee_master values('0003', 'Sato', 'B1');
+insert into employee_master values('0004', 'Hashimoto', 'D3');
+insert into employee_master values('0005', 'Imai', 'A1');
+insert into employee_master values('0006', 'Kimura', 'B1');
+
+insert into employee_skill values('0001', 'FE', '2010-12-01');
+insert into employee_skill values('0001', 'DB', '2011-07-01');
+insert into employee_skill values('0002', 'IP', '2015-07-01');
+insert into employee_skill values('0002', 'FE', '2013-09-09');
+insert into employee_skill values('0002', 'AP', '2019-05-15');
+insert into employee_skill values('0005', 'IP', '2018-10-10');
+
+
+SELECT emp_id FROM employee_skill
+WHERE EXISTS (SELECT * FROM employee_skill
+WHERE skill_code = 'FE')
+
+SELECT 社員名 FROM 社員表 A
+WHERE EXISTS (SELECT * FROM 社員スキル表 B
+WHERE スキルコード = 'FE' AND A.社員番号 = B.社員番号)
+
+SELECT emp_name FROM employee_master A
+WHERE EXISTS (SELECT * FROM employee_skill B
+WHERE skill_code = 'FE' AND A.emp_id = B.emp_id)
+
+SELECT DISTINCT 社員番号 FROM 社員スキル表 B1
+WHERE EXISTS (SELECT * FROM 社員スキル表 B2
+WHERE B1.社員番号 = B2.社員番号
+AND B1.スキルコード <> B2.スキルコード)
+
+SELECT DISTINCT emp_id FROM employee_skill B1
+WHERE EXISTS (SELECT * FROM employee_skill B2
+WHERE B1.emp_id = B2.emp_id
+AND B1.skill_code <> B2.skill_code)
+
+
+
+
+
+SELECT 地区名, SUM(講師数), COUNT(スクール名)
+FROM スクール別受講状況表
+WHERE 講師数 < 5
+GROUP BY 地区名
+HAVING SUM(講師数) > 5
+
+
+SELECT area_name, SUM(num_of_teacher), COUNT(school_name)
+FROM school_sum
+WHERE num_of_teacher < 5
+GROUP BY area_name
+HAVING SUM(school_name) > 5
+
+select *
+  from (select area_name,
+               sum(num_of_student) as sum_of_student,
+               sum(num_of_teacher) as sum_of_teacher
+        from school_sum group by area_name) t1
+ where (t1.sum_of_student / t1.sum_of_teacher) < 30;
+
+
+SELECT area_name, SUM(num_of_teacher), COUNT(school_name)
+FROM school_sum
+WHERE num_of_teacher < 5
+GROUP BY area_name
+HAVING SUM(num_of_teacher) > 5
+
+

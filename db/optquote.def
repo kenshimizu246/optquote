@@ -1,0 +1,251 @@
+
+DROP TABLE IF EXISTS sequence;
+CREATE TABLE sequence (
+    name VARCHAR(50) NOT NULL,
+    current_value INT NOT NULL,
+    increment INT NOT NULL DEFAULT 1,
+    PRIMARY KEY (name)
+);
+
+DROP FUNCTION IF EXISTS currval;
+DELIMITER $
+CREATE FUNCTION currval (seq_name VARCHAR(50))
+    RETURNS INTEGER
+    LANGUAGE SQL
+    DETERMINISTIC
+    CONTAINS SQL
+    SQL SECURITY DEFINER
+    COMMENT ''
+BEGIN
+    DECLARE value INTEGER;
+    SET value = 0;
+    SELECT current_value INTO value
+        FROM sequence
+        WHERE name = seq_name;
+    RETURN value;
+END
+$
+DELIMITER ;
+
+DROP FUNCTION IF EXISTS nextval;
+DELIMITER $
+CREATE FUNCTION nextval (seq_name VARCHAR(50))
+    RETURNS INTEGER
+    LANGUAGE SQL
+    DETERMINISTIC
+    CONTAINS SQL
+    SQL SECURITY DEFINER
+    COMMENT ''
+BEGIN
+    UPDATE sequence
+    SET current_value = current_value + increment
+    WHERE name = seq_name;
+    RETURN currval(seq_name);
+END
+$
+DELIMITER ;
+
+DROP FUNCTION IF EXISTS setval;
+DELIMITER $
+CREATE FUNCTION setval (seq_name VARCHAR(50), value INTEGER)
+    RETURNS INTEGER
+    LANGUAGE SQL
+    DETERMINISTIC
+    CONTAINS SQL
+    SQL SECURITY DEFINER
+    COMMENT ''
+BEGIN
+    UPDATE sequence
+    SET current_value = value
+    WHERE name = seq_name;
+    RETURN currval(seq_name);
+END
+$
+DELIMITER ;
+
+
+drop table symbol;
+create table symbol (
+	symbol_id int unsigned not null auto_increment primary key,
+	symbol varchar(24) not null unique,
+	tick_size int unsigned not null,
+	description varchar(120)
+);
+
+drop table price;
+create table price (
+	symbol_id int unsigned not null,
+	date date not null,
+	price decimal(12,8) not null,
+	primary key(symbol_id,date)
+);
+
+drop table price_props;
+create table price_props (
+	symbol_id int unsigned not null,
+	date date not null,
+	name varchar(24) not null,
+	value varchar(120) not null,
+	primary key(symbol_id,date,name)
+);
+
+drop trigger conv_ver;
+drop table conversation;
+create table conversation (
+	id int unsigned not null,
+	version int unsigned not null default 0,
+	status_id int unsigned not null,
+	oc_id int unsigned not null default 0,
+	link_id int unsigned not null,
+	side_id int unsigned not null,
+	trader_id int unsigned,
+	client_id int unsigned not null,
+	trade_date date not null,
+	symbol_id int unsigned not null,
+	strategy_id int unsigned not null,
+	spot_price decimal(12,8) not null,
+	risk_free_rate decimal(12,8) not null,
+	dividend_yield decimal(12,8) not null,
+	settlement_date date not null,
+	quote_start datetime,
+	quote_expire datetime,
+	quote_remain int unsigned default 0,
+	primary key(id)
+);
+
+delemiter | 
+create trigger upd_conv_ver before update on conversation
+	for each row
+		begin
+		set NEW.version = NEW.version + 1;
+		end;
+|
+delemiter ;
+
+
+drop table link;
+create table link (
+	id int unsigned not null,
+	for_id int unsigned not null,
+	primary key(id, for_id)
+);
+
+drop table conversation_status;
+create table conversation_status (
+	status_id int unsigned not null,
+	status varchar(24) not null,
+	primary key(status_id)
+);
+
+drop table strategy;
+create table strategy (
+	id int unsigned not null,
+	name varchar(24) not null,
+	primary key(id)
+);
+
+drop table leg;
+create table leg (
+	conv_id int unsigned not null,
+	leg_id int unsigned not null,
+	version int unsigned not null default 0,
+	ls char(1) not null,
+	cp char(1) not null,
+	strike decimal(12,8) not null,
+	quantity decimal(12,8) not null,
+	maturity date not null,
+	volatility decimal(12,8) not null,
+	premium decimal(12,8) not null,
+	delta decimal(12,8) not null,
+	gamma decimal(12,8) not null,
+	vega decimal(12,8) not null,
+	theta decimal(12,8) not null,
+	rho decimal(12,8) not null,
+	primary key(conv_id,leg_id)
+);
+
+drop table conversation_hist;
+create table conversation_hist (
+	id int unsigned not null,
+	version int unsigned not null default 0,
+	status_id int unsigned not null,
+	side_id int unsigned not null,
+	trader_id int unsigned,
+	client_id int unsigned not null,
+	trade_date date not null,
+	symbol_id int unsigned not null,
+	strategy_id int unsigned not null,
+	spot_price decimal(12,8) not null,
+	risk_free_rate decimal(12,8) not null,
+	dividend_yield decimal(12,8) not null,
+	settlement_date date not null,
+	primary key(id)
+);
+
+drop table leg_hist;
+create table leg_hist (
+	conv_id int unsigned not null,
+	leg_id int unsigned not null,
+	version int unsigned not null default 0,
+	ls char(1) not null,
+	cp char(1) not null,
+	strike decimal(12,8) not null,
+	quantity decimal(12,8) not null,
+	maturity date not null,
+	volatility decimal(12,8) not null,
+	premium decimal(12,8) not null,
+	delta decimal(12,8) not null,
+	gamma decimal(12,8) not null,
+	vega decimal(12,8) not null,
+	theta decimal(12,8) not null,
+	rho decimal(12,8) not null,
+	primary key(conv_id,leg_id)
+);
+
+drop table chat;
+create table leg (
+  conv_id int unsigned not null,
+  chat_id int unsigned not null,
+	user_id int unsigned,
+	message varchar(4096),
+	primary key(conv_id,chat_id)
+);
+
+drop table user_master;
+create table user_master (
+	id int unsigned not null,
+	user_id varchar(8) not null,
+	name varchar(80) not null,
+	password varchar(24) not null,
+	primary key(user_id)
+);
+
+drop table user_permission;
+create table user_permission (
+	user_id int unsigned not null,
+	role varchar(8) not null,
+	primary key(user_id,role)
+);
+
+drop table login_history;
+create table login_history (
+	id int unsigned not null,
+	user_id int unsigned not null,
+	role varchar(8) not null,
+	login_time timestamp default current_timestamp,
+	session_id varchar(120) not null,
+	primary key(id)
+);
+
+
+drop table access_history;
+create table access_history (
+	id int unsigned not null,
+	login_history_id int unsigned not null,
+	access_time timestamp default current_timestamp,
+	primary key(id)
+);
+
+
+create view price_v as select symbol_id, date, value as price from price_props where name = 'currentPrice';
+

@@ -1,0 +1,9 @@
+{
+	"header":{
+		"type":"action",
+		"action_name":"heartbeat"
+	},
+	"body":{
+		"message":"hello"
+	}
+}

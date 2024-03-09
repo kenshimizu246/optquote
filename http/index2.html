@@ -1,0 +1,40 @@
+<html>
+<header>
+<link rel="stylesheet" type="text/css" href="index.css">
+</header>
+<body>
+	<div class='base'>
+		<div><img src="headerimage.jpg"/></div>
+		<div class='body'>
+			<div class='menu-bar'>
+				<div class='menu'>
+					<div class='menu-item'>Home</div>
+				</div>
+				<div class='menu'>
+					<div class='menu-item'>Products</div>
+					<div class='sub-menu'>
+						<div class='menu-item'>Option Calculator</div>
+						<div class='menu-item'>Option Trading</div>
+						<div class='menu-item'><a href='/optquote/?role=client' target='_blank'>Client</a></div>
+						<div class='menu-item'><a href='/optquote/?role=trader' target='_blank'>Trader</a></div>
+						<div class='menu-item' onclick='window.open("/optquote/?role=client", "client", "width=860,height=700,top=20,left=20");'>Client</div>
+						<div class='menu-item' onclick='window.open("/optquote/?role=trader", "trader", "width=860,height=700,top=50,left=50");'>Trader</div>
+					</div>
+				</div>
+				<div class='menu'>
+					<div class='menu-item'>Hobby</div>
+					<div class='sub-menu'>
+						<div class='menu-item'>Fishing</div>
+						<div class='menu-item'>OptionTrading</div>
+					</div>
+				</div>
+			</div>
+			<div class='content'>
+<p>Background</p>
+The purpose for this project is through developing prototype option quoting system, study feasibility to use ReactJS to a financial front system and C++ backend server for evaluating productibity and stability comparing Java based backend development. For frontend side, we focus on functionality, usability, and productivity for financial system. For backend, C++ has huge advantage for performance and resource management but productivity is lower than Java or other interpreter language. We focus on productivity and stability for backend development and test first method is one of the solutions for this area. The test case must be included not only functionality test case but also performance test and memory leackage test. Through this test first approach, we will find design patterns to achieve our goal to become one of the options comparing Java or other interpreter language. The one of big concerns is memory leackage for C++. The Java or other interpreter language has garbage corrector or similar function to resolve this issssue. Recently C++ supports similar functionality, shared_pointer. Also test first approach is another solution to check memory leakage. A test case to execute a method repeatedly within a loop enables us to check memory growth and performance to prevent memory leakage. Also it enhances memory usage. Recently in Java or other interpreter language has the issue for memory usage cause developer relys on garbage correction overmuch. The one of the solution for this issue is C++ and test first approach. C++ can control memory allocation directly and we can check that behavior in the unit test. The destructor for the class is executed immediately to release resources in C++ but we have to wait garbage corrector in Java or other interpreter languate. Garbage corrector is not under our control. It is hard to test it because it has very tight dependency on conditions.
+			</div>
+		</div>
+		<div>Footer</div>
+	</div>
+</body>
+</html>

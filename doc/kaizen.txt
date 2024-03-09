@@ -1,0 +1,52 @@
+
+- Close action
+- filter sort
+- timer/add status timeout
+- buy/sell on trader
+- session management while restart server.
+
+- calc premium to volatility
+- enable/disable field
+- strangle
+- quantity validation for Send RFQ
+
+- quantity validation
+- quantity unit in price master
+- strike sync for straddle
+- progress ber in login
+- support IE
+- version for conversation and leg
+- newRfq reducer -> action
+- Counter
+- Add package
+- status length/size
+- -e display / decimal point
+- market calendar
+- date, m1, d1
+- number 1m, 2m,
+- manual ticket
+- allocation
+- popup menu
+- slow server start
+- bootstrap performance
+
+done:
+- button design
+- L/S, C/P broken
+- strike default value
+- button in status RFQ_Reject
+- Reject RFQ
+- Cancel Quote
+- Reject Order
+- premium
+- greeks empty
+- strategy mixed with upper/lower
+- login default for trader.
+- Open/Close flag
+- oc empty after send RFQ
+- premium must be empty after click close button.
+- maturity must be original after click close button.
+- change order, volatility, premium
+
+
+

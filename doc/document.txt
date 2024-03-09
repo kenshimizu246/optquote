@@ -1,0 +1,78 @@
+Background:
+The purpose for this project is through developing prototype option quoting system, study feasibility to use ReactJS to a financial front system and C++ backend server for evaluating productibity and stability comparing Java based backend development. For frontend side, we focus on functionality, usability, and productivity for financial system. For backend, C++ has huge advantage for performance and resource management but productivity is lower than Java or other interpreter language. We focus on productivity and stability for backend development and test first method is one of the solutions for this area. The test case must be included not only functionality test case but also performance test and memory leackage test. Through this test first approach, we will find design patterns to achieve our goal to become one of the options comparing Java or other interpreter language. The one of big concerns is memory leackage for C++. The Java or other interpreter language has garbage corrector or similar function to resolve this issssue. Recently C++ supports similar functionality, shared_pointer. Also test first approach is another solution to check memory leakage. A test case to execute a method repeatedly within a loop enables us to check memory growth and performance to prevent memory leakage. Also it enhances memory usage. Recently in Java or other interpreter language has the issue for memory usage cause developer relys on garbage correction overmuch. The one of the solution for this issue is C++ and test first approach. C++ can control memory allocation directly and we can check that behavior in the unit test. The destructor for the class is executed immediately to release resources in C++ but we have to wait garbage corrector in Java or other interpreter languate. Garbage corrector is not under our control. It is hard to test it because it has very tight dependency on conditions.
+
+Expected Achievements:
+Use ReactJS for One page application for financial trading system.
+Server application based on C++ to achieve productivity and stability same level as a Java application without loosing advantage of performance and resource management.
+Enhanced test first methodology to C++ server application to increase stability and high ratency.
+
+Prototype System Flow:
+This application is for communicating with client and broker to decide price and trading condition for option. The client can send a RFQ (request for quotation) for option. The trader can evaluate an option value for the RFQ based on black sholes model, then send a quotation to the client. The client can order, counter, or reject a quotation. If client sends an order, then broker can accept or reject that order because while from quotation to order, market will be moved rapidly and it is impossible for trader to hedge the trade. Once trader can accept an order, then this trade will be executed and this trade makes open position. The client can make an close RFQ with a click.
+Simple Flow of Execution:
+Client              Trader           Quant Lib
+   +--------RFQ------>+
+                      |
+                      +-----Calc Req.-->+
+                                        |
+                      +<----Result------+
+                      |
+   +<----Quotation----+
+   |
+   +------Order------>+
+                      |
+   +<----Execute------+
+ 
+Analysis:
+Achievement of stability and productivity as same level as Java or other modern interpreter language.
+Assessment of ReactJS to use it in financial application especially trading system.
+Best Database Design for performance.
+
+1. Stability
+
+2. Productivity
+
+3. Database Design for best practice
+
+4. Test First approach
+
+5.
+
+Conclusion:
+
+
+
+Other:
+Now , a single page application becomes one of our options to develop a financil front-end system. The performance and usability is getting better than last several years. The ReactJS has possiblity to develop high performance front-end application cause it has vertual dom. It enables to draw quickly enough for business use.
+The importance to use C++ is most financial institution uses C++ for quants library. Some company uses Java JINI to call C++ library as black box and it losts performance and stability. The engineer for C++ and Java is totally differenct team and sometimes having a problem causing miss communication between the teams. Through developing server from scratch with C++, I found pros and cons more cleary better than just discussion over the desk. It is more platical and this knowledge is more usefull to production. To develop stable and high ratency system, it forcus system risk management. The points are stability and rabustness, never stop the service. From that points, the unit test is the key technology. From unit level, it tests not only specification but also each functions tested repeatedly more than 1000000 to check stabilitty and memory usage. Even method called repeatedly more than 1000000, the process memory size must be same between first call and last call. 
+Why ReactJS? The reason is that the financial client needs more quick operation. Some user requires it can operate only from keyboard because mouse takes more time than keyboard operation. The forcus between the editable objects must be moved with only keyboard, tab or shift+tab. 
+
+I hate fantasist engineer. I saw many times in the meeting room. People are talking about new system architecture with image of new technology. 
+
+Database performance. financial system requires performance. The design policy is following.
+1. transaction data must be fixed length.
+2. split multiple tables to exclude valiable length data.
+The advantage for this policy is that there are two types of database engine, for example postgress SQL and Maria DB. Both database engines are very popular open source software. The difference is that update operation. Postgress SQL reallocates record space for update operation but Maria DB is different. The Maria DB allocates record space if record size is variable. If it is fixed record size, it overwrite a record when it is update operation. That makes better performance because it does not need to search free space in the disc. Off cause some of engine supports pre allocation model. Even though, that will allocation always as a new record, so that it wastes disc space and messing up the sequence of records. The requesce of records means for financeial sytem, the order of record is very ...
+basically the order of record is key for the performance. From hardware point of view our hard disk is composed of disk and reader. If record is ordered in the disk, it is not necessary to jump on the disk. It needs simply read in the disk. Also hard disk reads data based on block size, so that the record size is less than block size and block contains multiple records, one read can load multple record but if each recorrds are located in the multiple block, 
+if the record are spreading in multiple blocks, the reader jumps on the disk and load block with unnecessary memory. For example, the recorrd size is 1k and block size is 4k, then each block has only one record to be load, then that waste 4 times. If it uses RAID 5, that waste will increase related to the number of disk theoretically.
+
+The advantage for C++ are; 
+1. very light comparing vertual machine like Java. It needs vertual engine prior to start application. C++ application start application directly, so that it has advantage when it needs restart.
+2. it has more functionality than interpreter languate because it can use operating system functionality.
+3. it can use system call directly so that it can use operating level atomic operation.
+4. If it needs resource access, it can directly access system resource.
+5. 
+
+For memory issue for modern interpreter language. sometimes I found a code which uses constructtor to switch on and destructor to switch off but this approach is only effective C/C++ language. Other interupter language will cause issue this approach because some interrupter language will not gurantee the execution of destructor. Instead use of destructor, most interpreter language supports try-catch-finally functtionality to execute codes developer intendedly in the end of source code in finally block.
+
+
+
+
+
+
+
+
+
+
+
+
+

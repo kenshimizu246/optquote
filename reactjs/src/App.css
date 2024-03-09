@@ -1,0 +1,596 @@
+* {padding:0; margin:0; border: 0; outline: 0;}
+
+div {
+	display: inline-block;
+}
+
+#ticket-box {
+	width: 760px;
+	height: 210px;
+}
+
+#ticket-box-header {
+	width: 760px;
+	height: 100px;
+}
+
+#menu-box {
+	width: 760px;
+}
+
+#ticket-id-box {
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	width: 84px;
+}
+
+#ticket-id-label {
+	width: 24px;
+}
+
+#ticket-id-value {
+	width: 58px;
+}
+
+#ticket-status-box {
+	position: absolute;
+	top: 10px;
+	left: 100px;
+	width: 144px;
+}
+
+#ticket-status-label {
+	width: 58px;
+}
+
+#ticket-status-value {
+	width: 84px;
+}
+
+#ticket-oc-box {
+	position: absolute;
+	top: 10px;
+	left: 480px;
+}
+
+#ticket-link-box {
+	position: absolute;
+	top: 10px;
+	left: 580px;
+	width: 160px;
+}
+
+#ticket-oc-label {
+	width: 32px;
+}
+
+#ticket-oc-value {
+	width: 48px;
+}
+
+#ticket-settl-box {
+	position: absolute;
+	top: 70px;
+	left: 580px;
+	width: 162px;
+}
+
+#ticket-settl-label {
+	width: 62px;
+	text-align: right;
+}
+
+#ticket-tradedate-box {
+	position: absolute;
+	top: 42px;
+	left: 580px;
+	width: 162px;
+}
+
+#ticket-tradedate-label {
+	width: 62px;
+	text-align: right;
+}
+
+
+#ticket-remain-box {
+	position: absolute;
+	top: 10px;
+	left: 640px;
+}
+
+#ticket-remain-value {
+	position: absolute;
+	width: 20px;
+}
+
+#ticket-side-box {
+	position: absolute;
+	top: 42px;
+	left: 5px;
+}
+
+#ticket-side-label {
+	width: 40px;
+}
+
+#ticket-symbol-box {
+	position: absolute;
+	top: 42px;
+	left: 142px;
+}
+
+#ticket-price-box {
+	position: absolute;
+	top: 42px;
+	left: 290px;
+}
+
+#ticket-price-label {
+	width: 48px;
+}
+
+
+#ticket-dvdyld-box {
+	position: absolute;
+	top: 42px;
+	left: 420px;
+}
+
+#ticket-dvdyld-label {
+	width: 80px;
+}
+
+#ticket-strategy-box {
+	position: absolute;
+	top: 10px;
+	left: 280px;
+}
+
+#ticket-strategy-label {
+	width: 70px;
+}
+
+#ticket-rfrate-box {
+	position: absolute;
+	top: 70px;
+	left: 420px;
+}
+
+#ticket-rfrate-label {
+	width: 80px;
+}
+
+#ticket-settl-label {
+}
+
+#ticket-settl-value {
+	width: 90px;
+}
+
+
+.shield {
+	z-index: 97;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: solid 1px;
+	background-color: rgba(0,0,0,0.7);
+}
+
+.btn {
+	width: 90px;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #aaa;
+	cursor: pointer;
+}
+
+.btn:active {
+	background-color: darkgray;
+	color: white;
+}
+
+.datepicker-date-only-field {
+	width: 77px;
+}
+
+.menu-box {
+	display: block;
+	border: solid 1px;
+	height: 40px;
+}
+
+.ticket-box {
+	display: block;
+	border: solid 1px;
+}
+
+.ticket-header {
+	display: block;
+	position: relative;
+}
+
+.field-label {
+	display: inline-block;
+	text-align: right;
+}
+
+.ticket-field {
+	display: inline-block;
+	margin: 5px;
+	width: 200px;
+}
+
+
+.field-value {
+	display: inline-block;
+	text-align: left;
+	width: 80px;
+	margin-left: 2px;
+}
+
+.field-input {
+	display: inline-block;
+	border: 1px solid #aaa;
+	height: 22px;
+}
+
+.field-input-date {
+	display: inline-block;
+	width: 68px;
+}
+
+.field-input-decimal {
+	display: inline-block;
+	width: 72px;
+	height: 24px;
+	margin-left: 5px;
+	font-size: 1.0em;
+}
+
+.field-input-decimal-short {
+	display: inline-block;
+	width: 48px;
+	height: 24px;
+	margin-left: 5px;
+	font-size: 1.0em;
+}
+
+.field-input-select {
+	display: inline-block;
+	height: 24px;
+	width: 82px;
+	margin-left: 5px;
+	font-size: 1.0em;
+}
+
+/***********************
+ *  Conversation LIst  *
+ ***********************/
+.list-base {
+	display: block;
+	height: 264px;
+	width: 760px;
+	border: 1px solid #aaa;
+	margin: 0;
+	padding: 0;
+  font-size: 0.8em;
+}
+
+.list-header {
+	display: block;
+	width: 760px;
+	border-bottom: solid 1px;
+	background-color: #333333;
+	color: #FFFFFF;
+}
+
+.list-field {
+	text-align: center;
+}
+
+.list-expand {
+	width: 20px;
+	height: 20px;
+	align: center;
+}
+
+.expand-icon {
+	margin: 1px;
+}
+
+.list-id {
+	width: 40px;
+}
+
+.list-tradedate {
+	text-align: center;
+	width: 100px;
+}
+
+.list-status {
+	text-align: center;
+	width: 88px;
+}
+
+.list-oc {
+	text-align: center;
+	width: 40px;
+}
+
+.list-side {
+	text-align: center;
+	width: 40px;
+}
+
+.list-symbol {
+	width: 60px;
+	text-align: center;
+}
+
+.list-strategy {
+	text-align: center;
+	width: 100px;
+}
+
+.list-settldate {
+	text-align: center;
+	width: 100px;
+}
+
+.list-row {
+	width: 800px;
+	margin: 0;
+	padding: 0;
+	border-bottom: solid 1px;
+}
+
+.list-row:hover{
+	background-color: #CEF9DC;
+}
+
+.list-view {
+	display: block;
+	height: 240px;
+	width: 760px;
+	overflow-x: scroll;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+}
+
+.conv-field {
+	display: inline-block;
+	border: 1px solid #aaa;
+	width: 116px;
+	text-align: center;
+  font-size: 0.5em;
+	margin: 0;
+	padding: 0;
+}
+
+
+/***********************
+ *        Login        *
+ ***********************/
+.login-box {
+	z-index: 99;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 360px;
+	height: 232px;
+	margin-left:-170px;
+	margin-top:-100px;
+	border: 1px solid #aaa;
+	display: block;
+	background: white;
+}
+
+.login-title {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+.login-field-box {
+	display: block;
+	width: 100%;
+	margin: 5px;
+}
+
+.login-field-label {
+	display: inline-block;
+	width: 35%;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.login-control-box {
+	display: block;
+	width: 100%;
+}
+
+.login-status-box {
+	diplay: block;
+	width: 100%;
+}
+
+.login-field-select {
+	border: 1px solid #aaa;
+}
+
+.login-field-input {
+	border: 1px solid #aaa;
+}
+
+#login-cancel-btn {
+	float: right;
+}
+
+#login-login-btn {
+	float: right;
+}
+
+.conv-leg-list {
+	display: inline-block;
+}
+
+.conv-list-leg-list {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.leg {
+	display: flex;
+	width: 758px;
+	border-bottom: solid 1px;
+}
+
+.leg-header {
+	display: flex;
+	width: 758px;
+	border-bottom: solid 1px;
+	background-color: #333333;
+	color: #FFFFFF;
+}
+
+.leg-field-base {
+	display: inline-block;
+	text-align: center;
+  font-size: 0.8em;
+}
+
+.leg-field-label {
+	display: inline-block;
+	width: 72px;
+	height: 20px;
+	float: left;
+	text-align: center;
+  font-size: 0.8em;
+}
+
+.leg-date-field-label {
+	display: inline-block;
+	width: 76px;
+	height: 20px;
+	float: left;
+	text-align: center;
+  font-size: 0.8em;
+}
+
+
+.leg-field-box {
+	display: inline-block;
+	width: 72px;
+	height: 24px;
+	float: left;
+}
+
+.leg-date-field-box {
+	display: inline-block;
+	width: 78px;
+	height: 24px;
+	float: left;
+}
+
+.leg-field {
+	display: inline-block;
+	width: 72px;
+	height: 24px;
+	float: left;
+	text-align: center;
+  font-size: 0.8em;
+}
+
+.leg-field-ro {
+	display: inline-block;
+	width: 60px;
+	height: 20px;
+	float: left;
+	text-align: center;
+  font-size: 0.8em;
+	margin: 2px;
+	overflow-x: hidden;
+}
+
+.leg-input-date {
+	position: relative;
+	display: inline-block;
+	width: 76px;
+	height: 20px;
+	margin: 2px;
+	font-size: 0.8em;
+	overflow-x: hidden;
+}
+
+.leg-field-ls {
+	display: inline-block;
+	width: 52px;
+	float: left;
+	height: 22px;
+  text-align: center;
+}
+
+.leg-field-ls-ro {
+	display: inline-block;
+	width: 52px;
+	height: 20px;
+	float: left;
+  text-align: center;
+	font-size: 0.8em;
+	margin: 2px;
+	overflow-x: hidden;
+}
+
+.leg-field-ls-label {
+	display: inline-block;
+	width: 52px;
+	float: left;
+	height: 22px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.leg-field-cp-label {
+	display: inline-block;
+	width: 52px;
+	float: left;
+	height: 22px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.leg-field-cp {
+	display: inline-block;
+	width: 52px;
+	float: left;
+	height: 22px;
+  text-align: center;
+}
+
+.leg-field-cp-ro {
+	display: inline-block;
+	width: 52px;
+	height: 20px;
+	float: left;
+  text-align: center;
+	font-size: 0.8em;
+	margin: 2px;
+	overflow-x: hidden;
+}
+
+/* to fix broken layout for the month container. */
+.react-datepicker__month-container {
+	width: 250px;
+}
+
+.list-row-detail {
+	display: inline-block;
+}
+
+

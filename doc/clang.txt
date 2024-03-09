@@ -1,0 +1,2 @@
+try to install clang from llvm.org but "cmake CMakeList.txt" is not simply working. Just "sudo yum install clang" is OK to install clang and clang++.
+

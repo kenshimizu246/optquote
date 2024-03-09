@@ -1,0 +1,16 @@
+This is memorandam for the points of using multi-thread for this product.
+
+This is only for Linux.
+There are two thread methods, standard library thread and POSIX thread.
+C++11
+
+to build an application using thread, it needs to add -pthread in the CMakefile as following even using std::thread.
+without it, it threw an error while running application.
+	find_package(thread)
+	target_link_libraries(AppName pthread)
+
+It can be compiled but runtime error because there is weak symbol definition in the libstdc++.
+
+ref:
+https://qiita.com/yoh2/items/97821d3d1dbe3e024d4f
+

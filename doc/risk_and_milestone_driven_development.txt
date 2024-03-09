@@ -1,0 +1,77 @@
+Risk and Milestone driven development
+
+ビジネスとソフトウェアー開発の透過性と同期。
+
+ビジネスとソフトウェアーを一体に考え、ビジネスリスクを
+オペレーション、システムの双方から効果的な管理を実現する。
+
+最後のテストですべてをテストすることは不可能。
+開発段階からリスクを把握しながら、バリデーションなどのテストは
+コンポーネントレベルで行うべき。最後に限界値テストなどの細かい
+テストを全てもれなく行うことは、現状のソフトウェアーのつくりや
+人が常に入れ替わるプロジェクトなどでは、リスクが高すぎる。
+テストの自動化は、人材の流動化に対する有効な手段であり、システム
+リスクを低減する有効な方法。
+
+目的、
+リスクの分析作業を通して、ユーザに対して開発工程の透過性を高めることによって、ビジネスとの同期性を高める。
+ソフトウェアーの品質の向上ー＞テストドリブンー＞境界値テストなどは全て
+Unitテストで行い、コメントに詳細を記載し、プログラムによって自動的に
+ドキュメント化し、ワークロードを下げる。
+
+
+全体のリスクを把握し、ユーザとそれを共有することで、ユーザ側と開発側での
+作業の同期をとる。お互いの作業の透過性をとる。
+マイルストーンはその動機をとるために必要で、マイルストーンの通過地点では、
+ユーザに対してプレゼンを行う。したがってマイルストーンは常にユーザに対して
+ビジブルなものにする。
+マイルストーンを決めるにあたって大切なことは、ユーザに対して開発過程の
+透過性を高めることによって、ユーザ側のビジネス計画の同期性を高めることに
+ある。
+
+プライオリティの変化
+change of priority
+常にソフトウェアー開発の現場では、状況によりプライオリティーは変化する。
+例えば、システム開発の初期段階では、正常系の流れを作り出すことに重きを置き、
+小さなバリデーションは、流れができてから次の段階にまわす。
+例えば、今回のオプショントレードのクオーテーションシステムの場合、まずは
+ログインからリクエスト、クオーテーション、オーダー、執行の流れを作りだし、
+その後のリファクタリングは、その流れを作るにあたってアドレスしたリスクに
+したがってプライオリティーを決めて作業計画を決めていく。
+リリース計画などは、このリスクがプロダクションクオリティーまで対処ができている
+基準になる。
+
+経験なき技術は妄想にしかすぎない。
+Technology without experience is only a delusion.
+
+
+{"conversation":
+	{
+		"side":"S",
+		"riskFreeRate":0.01,
+		"settlementDate":"2018-11-06T11:18:26.283Z",
+		"strategy":"straddle",
+		"legs":[{
+			"id":0,
+			"ls":"S",
+			"cp":"C",
+			"quantity":"100",
+			"strike":"100",
+			"expiry":"2018-11-30T11:18:26.000Z",
+			"volatility":"0.3",
+			"delta":0,
+			"gamma":0,
+			"vega":0,
+			"theta":0,
+			"rho":0,
+			"ls_readonly":"",
+			"cp_readonly":"",
+			"quantity_readonly":"",
+			"strike_readonly":"",
+			"expiry_readonly":"",
+			"volatility_readonly":""
+		},{
+			"id":1,
+			"ls":"S",
+			"cp":"P",
+			"quantity":"100","strike":"100","expiry":"2018-11-30T11:18:26.000Z","volatility":"0.2","delta":0,"gamma":0,"vega":0,"theta":0,"rho":0,"ls_readonly":"readonly","cp_readonly":"readonly","quantity_readonly":"readonly","strike_readonly":"","expiry_readonly":"readonly","volatility_readonly":""}],"symbol":"AMWD","spotPrice":84.95,"dividendYield":0.03},"controls":{"userId":"client","role":"client","connectionStatus":"ONOPEN","passwd":"adsfa","loginStatus":true,"sessionId":"c27d528b-b8b1-4cc0-9abe-281b3d589c74","showLogin":false,"symbols":["AAPL","AMWD","ARLZ","AVNW","BBY","BILI","BJ","BOX","CIA","CLCN","CTLT","DSW","HAIN","HPE","HRB","IHRTQ","JRJC","JT","KEN","KEQU","LCI","NCS","NOAH","OOMA","PAHC","PSEC","REX","RYB","SCSC","SCVL","SFUN","SXI","TIF","TLRY","USAT","XCRA","YRD"],"prices":[{"symbol":"AAPL","description":"Apple Inc.","date":"2018-09-26 00:00:00","price":216.16,"dividendYield":0.03},{"symbol":"AMWD","description":"American Woodmark Corp","date":"2018-09-26 00:00:00","price":84.95,"dividendYield":0.03},{"symbol":"ARLZ","description":"Aralez Pharmaceuticals Inc","date":"2018-09-26 00:00:00","price":0.0345,"dividendYield":0.03},{"symbol":"AVNW","description":"Aviat Networks Inc","date":"2018-09-26 00:00:00","price":15.8,"dividendYield":0.03},{"symbol":"BBY","description":"Best Buy Co Inc","date":"2018-09-26 00:00:00","price":82.08,"dividendYield":0.03},{"symbol":"BILI","description":"Bilibili Inc","date":"2018-09-26 00:00:00","price":10.91,"dividendYield":0.03},{"symbol":"BJ","description":"BJs Wholesale Club Holdings Inc","date":"2018-09-26 00:00:00","price":29.03,"dividendYield":0.03},{"symbol":"BOX","description":"Box Inc","date":"2018-09-26 00:00:00","price":26.63,"dividendYield":0.03},{"symbol":"CIA","description":"Citizens Inc","date":"2018-09-26 00:00:00","price":8.28,"dividendYield":0.03},{"symbol":"CLCN","description":"Creative Learning Corp","date":"2018-09-26 00:00:00","price":0.19,"dividendYield":0.03},{"symbol":"CTLT","description":"Catalent Inc","date":"2018-09-26 00:00:00","price":42.14,"dividendYield":0.03},{"symbol":"DSW","description":"DSW Inc","date":"2018-09-26 00:00:00","price":27.36,"dividendYield":0.03},{"symbol":"HAIN","description":"Hain Celestial Group Inc","date":"2018-09-26 00:00:00","price":28.52,"dividendYield":0.03},{"symbol":"HPE","description":"Hewlett Packard Enterprise Co","date":"2018-09-26 00:00:00","price":16.2,"dividendYield":0.03},{"symbol":"HRB","description":"H & R Block Inc","date":"2018-09-26 00:00:00","price":26.47,"dividendYield":0.03},{"symbol":"IHRTQ","description":"iHeartMedia Inc","date":"2018-09-26 00:00:00","price":0.4475,"dividendYield":0.03},{"symbol":"JRJC","description":"China Finance Online Co Ltd","date":"2018-09-26 00:00:00","price":1.78,"dividendYield":0.03},{"symbol":"JT","description":"Jianpu Technology Inc","date":"2018-09-26 00:00:00","price":4.99,"dividendYield":0.03},{"symbol":"KEN","description":"Kenon Holdings Ltd","date":"2018-09-26 00:00:00","price":16.1,"dividendYield":0.03},{"symbol":"KEQU","description":"Kewaunee Scientific Corp","date":"2018-09-26 00:00:00","price":34,"dividendYield":0.03},{"symbol":"LCI","description":"Lannett Company Inc","date":"2018-09-26 00:00:00","price":5.15,"dividendYield":0.03},{"symbol":"NCS","description":"NCI Building Systems Inc","date":"2018-09-26 00:00:00","price":15.3,"dividendYield":0.03},{"symbol":"NOAH","description":"Noah Holdings Ltd","date":"2018-09-26 00:00:00","price":46.57,"dividendYield":0.03},{"symbol":"OOMA","description":"Ooma Inc","date":"2018-09-26 00:00:00","price":15.95,"dividendYield":0.03},{"symbol":"PAHC","description":"Phibro Animal Health Corp","date":"2018-09-26 00:00:00","price":50.75,"dividendYield":0.03},{"symbol":"PSEC","description":"Prospect Capital Corp","date":"2018-09-26 00:00:00","price":7.16,"dividendYield":0.03},{"symbol":"REX","description":"REX American Resources Corp","date":"2018-09-26 00:00:00","price":79.61,"dividendYield":0.03},{"symbol":"RYB","description":"RYB Education Inc","date":"2018-09-26 00:00:00","price":19.47,"dividendYield":0.03},{"symbol":"SCSC","description":"ScanSource Inc","date":"2018-09-26 00:00:00","price":42.55,"dividendYield":0.03},{"symbol":"SCVL","description":"Shoe Carnival Inc","date":"2018-09-26 00:00:00","price":33.67,"dividendYield":0.03},{"symbol":"SFUN","description":"Fang Holdings Ltd","date":"2018-09-26 00:00:00","price":3.02,"dividendYield":0.03},{"symbol":"SXI","description":"Standex International Corp","date":"2018-09-26 00:00:00","price":112.1,"dividendYield":0.03},{"symbol":"TIF","description":"Tiffany & Co","date":"2018-09-26 00:00:00","price":131.45,"dividendYield":0.03},{"symbol":"TLRY","description":"Tilray Inc","date":"2018-09-26 00:00:00","price":43.86,"dividendYield":0.03},{"symbol":"USAT","description":"USA Technologies Inc","date":"2018-09-26 00:00:00","price":15.55,"dividendYield":0.03},{"symbol":"XCRA","description":"Xcerra Corp","date":"2018-09-26 00:00:00","price":14.42,"dividendYield":0.03},{"symbol":"YRD","description":"Yirendai Ltd","date":"2018-09-26 00:00:00","price":17.06,"dividendYield":0.03}]}}

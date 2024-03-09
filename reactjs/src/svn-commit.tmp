@@ -1,0 +1,8 @@
+
+-- この行以下は無視されます --
+
+M    App.css
+M    App.js
+M    actions/strategyUpdateAction.js
+M    actions/strikeUpdateAction.js
+M    reducers/body.js

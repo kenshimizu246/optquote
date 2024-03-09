@@ -1,0 +1,2 @@
+C++11, three pointers are introduced. unique_ptr<T>, shared_ptr<T>, weak_ptr<T>.
+The purpose of these smart pointers is to reduce a risk of memory leak. 

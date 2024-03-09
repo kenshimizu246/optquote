@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="644" version="1.1" width="582" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#00ff" height="46" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="112" x="238" y="62"/>
+<rect fill="#ffffff" height="46" rx="16" ry="16" stroke="#000000" stroke-width="1" width="112" x="238" y="62"/>
+<rect fill="#ffffff" height="44" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="110" x="239" y="63"/>
+<text font-family="Dialog" font-size="12" x="283" y="76">
+INIT</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="238" x2="349" y1="86" y2="86"/>
+<text font-family="Dialog" font-size="12" x="240" y="99">
+Send RFQ</text>
+<rect fill="#00ff" height="46" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="102" x="246" y="142"/>
+<rect fill="#ffffff" height="46" rx="16" ry="16" stroke="#000000" stroke-width="1" width="102" x="246" y="142"/>
+<rect fill="#ffffff" height="44" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="100" x="247" y="143"/>
+<text font-family="Dialog" font-size="12" x="284" y="156">
+RFQ</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="246" x2="347" y1="166" y2="166"/>
+<text font-family="Dialog" font-size="12" x="248" y="179">
+Take Ownership</text>
+<rect fill="#00ff" height="62" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="94" x="246" y="222"/>
+<rect fill="#ffffff" height="62" rx="16" ry="16" stroke="#000000" stroke-width="1" width="94" x="246" y="222"/>
+<rect fill="#ffffff" height="60" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="92" x="247" y="223"/>
+<text font-family="Dialog" font-size="12" x="278" y="236">
+TAKE</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="246" x2="339" y1="246" y2="246"/>
+<text font-family="Dialog" font-size="12" x="248" y="259">
+Quote RFQ</text>
+<text font-family="Dialog" font-size="12" x="248" y="275">
+Reject RFQ</text>
+<rect fill="#00ff" height="78" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="102" x="246" y="326"/>
+<rect fill="#ffffff" height="78" rx="16" ry="16" stroke="#000000" stroke-width="1" width="102" x="246" y="326"/>
+<rect fill="#ffffff" height="76" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="100" x="247" y="327"/>
+<text font-family="Dialog" font-size="12" x="276" y="340">
+QUOTE</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="246" x2="347" y1="350" y2="350"/>
+<text font-family="Dialog" font-size="12" x="248" y="363">
+Order</text>
+<text font-family="Dialog" font-size="12" x="248" y="379">
+Counter</text>
+<text font-family="Dialog" font-size="12" x="248" y="395">
+Cancel</text>
+<rect fill="#00ff" height="46" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="91" x="62" y="222"/>
+<rect fill="#ffffff" height="46" rx="16" ry="16" stroke="#000000" stroke-width="1" width="91" x="62" y="222"/>
+<rect fill="#ffffff" height="44" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="89" x="63" y="223"/>
+<text font-family="Dialog" font-size="12" x="68" y="236">
+REJECT_RFQ</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="62" x2="152" y1="246" y2="246"/>
+<rect fill="#00ff" height="62" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="91" x="254" y="446"/>
+<rect fill="#ffffff" height="62" rx="16" ry="16" stroke="#000000" stroke-width="1" width="91" x="254" y="446"/>
+<rect fill="#ffffff" height="60" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="89" x="255" y="447"/>
+<text font-family="Dialog" font-size="12" x="277" y="460">
+ORDER</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="254" x2="344" y1="466" y2="466"/>
+<text font-family="Dialog" font-size="12" x="256" y="479">
+Execute</text>
+<text font-family="Dialog" font-size="12" x="256" y="495">
+Reject</text>
+<rect fill="#00ff" height="46" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="108" x="54" y="326"/>
+<rect fill="#ffffff" height="46" rx="16" ry="16" stroke="#000000" stroke-width="1" width="108" x="54" y="326"/>
+<rect fill="#ffffff" height="44" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="106" x="55" y="327"/>
+<text font-family="Dialog" font-size="12" x="60" y="340">
+REJECT_QUOTE</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="54" x2="161" y1="350" y2="350"/>
+<rect fill="#00ff" height="46" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="81" x="254" y="542"/>
+<rect fill="#ffffff" height="46" rx="16" ry="16" stroke="#000000" stroke-width="1" width="81" x="254" y="542"/>
+<rect fill="#ffffff" height="44" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="79" x="255" y="543"/>
+<text font-family="Dialog" font-size="12" x="266" y="556">
+EXECUTE</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="254" x2="334" y1="566" y2="566"/>
+<rect fill="#00ff" height="46" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="110" x="54" y="446"/>
+<rect fill="#ffffff" height="46" rx="16" ry="16" stroke="#000000" stroke-width="1" width="110" x="54" y="446"/>
+<rect fill="#ffffff" height="44" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="108" x="55" y="447"/>
+<text font-family="Dialog" font-size="12" x="60" y="460">
+REJECT_ORDER</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="54" x2="163" y1="470" y2="470"/>
+<ellipse cx="294" cy="22" fill="#000000" rx="8.0" ry="8.0" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="294,107 294,142" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="287" x2="294" y1="130" y2="142"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="301" x2="294" y1="130" y2="142"/>
+<text font-family="Dialog" font-size="12" x="296" y="129">
+Press Send RFQ</text>
+<polyline fill="none" points="294,30 294,62" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="287" x2="294" y1="50" y2="62"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="301" x2="294" y1="50" y2="62"/>
+<text font-family="Dialog" font-size="12" x="296" y="51">
+Press New</text>
+<polyline fill="none" points="294,187 294,222" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="287" x2="294" y1="210" y2="222"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="301" x2="294" y1="210" y2="222"/>
+<text font-family="Dialog" font-size="12" x="297" y="209">
+Press Take</text>
+<polyline fill="none" points="294,283 294,326" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="287" x2="294" y1="314" y2="326"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="301" x2="294" y1="314" y2="326"/>
+<text font-family="Dialog" font-size="12" x="296" y="310">
+Press Quote</text>
+<polyline fill="none" points="246,246 152,246" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="164" x2="152" y1="239" y2="246"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="164" x2="152" y1="253" y2="246"/>
+<text font-family="Dialog" font-size="12" x="167" y="240">
+Press Reject</text>
+<polyline fill="none" points="294,403 294,446" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="287" x2="294" y1="434" y2="446"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="301" x2="294" y1="434" y2="446"/>
+<text font-family="Dialog" font-size="12" x="296" y="429">
+Press Order</text>
+<polyline fill="none" points="246,350 161,350" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="173" x2="161" y1="343" y2="350"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="173" x2="161" y1="357" y2="350"/>
+<text font-family="Dialog" font-size="12" x="172" y="345">
+Press Reject</text>
+<polyline fill="none" points="294,507 294,542" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="287" x2="294" y1="530" y2="542"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="301" x2="294" y1="530" y2="542"/>
+<text font-family="Dialog" font-size="12" x="296" y="529">
+Press Execute</text>
+<polyline fill="none" points="254,470 163,470" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="175" x2="163" y1="463" y2="470"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="175" x2="163" y1="477" y2="470"/>
+<text font-family="Dialog" font-size="12" x="174" y="465">
+Press Reject</text>
+<ellipse cx="26" cy="250" fill="#000000" rx="12.0" ry="12.0" stroke="#000000" stroke-width="1"/>
+<ellipse cx="26" cy="250" fill="#ffffff" rx="11.0" ry="11.0" stroke="#ffffff" stroke-width="1"/>
+<ellipse cx="25" cy="249" fill="#000000" rx="7.5" ry="7.5" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="62,250 38,250" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="50" x2="38" y1="243" y2="250"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="50" x2="38" y1="257" y2="250"/>
+<ellipse cx="26" cy="354" fill="#000000" rx="12.0" ry="12.0" stroke="#000000" stroke-width="1"/>
+<ellipse cx="26" cy="354" fill="#ffffff" rx="11.0" ry="11.0" stroke="#ffffff" stroke-width="1"/>
+<ellipse cx="25" cy="353" fill="#000000" rx="7.5" ry="7.5" stroke="#000000" stroke-width="1"/>
+<ellipse cx="26" cy="474" fill="#000000" rx="12.0" ry="12.0" stroke="#000000" stroke-width="1"/>
+<ellipse cx="26" cy="474" fill="#ffffff" rx="11.0" ry="11.0" stroke="#ffffff" stroke-width="1"/>
+<ellipse cx="25" cy="473" fill="#000000" rx="7.5" ry="7.5" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="54,354 38,354" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="50" x2="38" y1="347" y2="354"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="50" x2="38" y1="361" y2="354"/>
+<polyline fill="none" points="54,474 38,474" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="50" x2="38" y1="467" y2="474"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="50" x2="38" y1="481" y2="474"/>
+<ellipse cx="290" cy="618" fill="#000000" rx="12.0" ry="12.0" stroke="#000000" stroke-width="1"/>
+<ellipse cx="290" cy="618" fill="#ffffff" rx="11.0" ry="11.0" stroke="#ffffff" stroke-width="1"/>
+<ellipse cx="289" cy="617" fill="#000000" rx="7.5" ry="7.5" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="290,587 290,606" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="283" x2="290" y1="594" y2="606"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="297" x2="290" y1="594" y2="606"/>
+<rect fill="#00ff" height="78" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="72" x="454" y="326"/>
+<rect fill="#ffffff" height="78" rx="16" ry="16" stroke="#000000" stroke-width="1" width="72" x="454" y="326"/>
+<rect fill="#ffffff" height="76" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="70" x="455" y="327"/>
+<text font-family="Dialog" font-size="12" x="460" y="340">
+COUNTER</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="454" x2="525" y1="350" y2="350"/>
+<text font-family="Dialog" font-size="12" x="456" y="363">
+Quote</text>
+<text font-family="Dialog" font-size="12" x="456" y="379">
+Execute</text>
+<text font-family="Dialog" font-size="12" x="456" y="395">
+Reject</text>
+<polyline fill="none" points="347,358 454,358" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="442" x2="454" y1="365" y2="358"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="442" x2="454" y1="351" y2="358"/>
+<text font-family="Dialog" font-size="12" x="362" y="352">
+Press Counter</text>
+<polyline fill="none" points="454,334 347,334" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="359" x2="347" y1="327" y2="334"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="359" x2="347" y1="341" y2="334"/>
+<text font-family="Dialog" font-size="12" x="366" y="328">
+Press Quote</text>
+<rect fill="#00ff" height="46" rx="16" ry="16" stroke="#00ff" stroke-width="1" width="126" x="422" y="446"/>
+<rect fill="#ffffff" height="46" rx="16" ry="16" stroke="#000000" stroke-width="1" width="126" x="422" y="446"/>
+<rect fill="#ffffff" height="44" rx="16" ry="16" stroke="#ffffff" stroke-width="1" width="124" x="423" y="447"/>
+<text font-family="Dialog" font-size="12" x="428" y="460">
+REJECT_COUNTER</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="422" x2="547" y1="470" y2="470"/>
+<polyline fill="none" points="494,403 494,446" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="487" x2="494" y1="434" y2="446"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="501" x2="494" y1="434" y2="446"/>
+<text font-family="Dialog" font-size="12" x="496" y="426">
+Press Reject</text>
+<ellipse cx="498" cy="538" fill="#000000" rx="12.0" ry="12.0" stroke="#000000" stroke-width="1"/>
+<ellipse cx="498" cy="538" fill="#ffffff" rx="11.0" ry="11.0" stroke="#ffffff" stroke-width="1"/>
+<ellipse cx="497" cy="537" fill="#000000" rx="7.5" ry="7.5" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="498,491 498,526" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="491" x2="498" y1="514" y2="526"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="505" x2="498" y1="514" y2="526"/>
+<polyline fill="none" points="454,403 334,542" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="336" x2="334" y1="528" y2="542"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="347" x2="334" y1="537" y2="542"/>
+<text font-family="Dialog" font-size="12" x="391" y="433">
+Press Execute</text>
+</svg>

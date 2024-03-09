@@ -1,0 +1,60 @@
+svn propedit svn:ignore
+export SVN_EDITOR=vim
+
+cannot find pthread -> check Boost_LIBRADYDIR
+
+=============================================
+npm run build error
+
+node_modules/query-string/index.js error.
+
+query-string is not used anymore, remove it.
+
+rm import query-string
+and
+npm uninstall query-string
+
+then execute
+npm run build
+
+=============================================
+httpd start stop
+
+sudo service httpd stop
+sudo service httpd start
+
+=============================================
+
+systemctl list-unit-files
+
+To add service
+
+create optquote.service under the /usr/lib/systemd/system
+
+It needs [Unit] and [Service].
+
+In Unit, there are Requires and Wants. Requires means it failed if required service is failed.
+Wants starts service even dependent service is failed.
+
+After and Before defines oder to launch service.
+
+kk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

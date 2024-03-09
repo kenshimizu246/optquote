@@ -1,0 +1,12 @@
+{
+	"pidfile": "/tmp/optquoteserver.pid",
+  "port": <port number,
+	"db_host":"<hostname>",
+	"db_port":<port number>,
+	"db_name":"<database name>",
+	"db_user":"<database user ID>",
+	"db_pass":"<database user password>",
+	"daemon":"<daemon flag>",
+}
+
+

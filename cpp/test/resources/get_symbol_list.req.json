@@ -1,0 +1,8 @@
+{
+	"header":{
+		"type":"action",
+		"action_name":"get_synonim_list"
+	}
+}
+
+

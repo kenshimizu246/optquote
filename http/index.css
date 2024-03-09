@@ -1,0 +1,41 @@
+* {padding:0; margin:0; border: 0; outline: 0;}
+
+div {
+  display: inline-block;
+}
+
+.base{
+	display: block;
+	width: 812px;
+}
+
+.body{
+	display: inline-flex;
+	width: 812px;
+}
+
+.menu-bar {
+  display: block;
+	width: 200px;
+}
+
+.menu {
+  display: block;
+}
+
+.menu-item {
+  display: block;
+}
+
+.menu-item:hover {
+	background-color: gray;
+}
+
+.sub-menu {
+	padding-left: 20px;
+	width: 180px;
+}
+
+.content {
+	width: 612px;
+}
